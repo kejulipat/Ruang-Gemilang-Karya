@@ -7,9 +7,9 @@ export const contactConfig = {
       "Halo PT Ruang Gemilang Kreatif, saya ingin berkonsultasi mengenai pengembangan branding dan solusi digital untuk usaha/UMKM saya.",
   },
   email: {
-    address: "halo@ruanggemilangkreatif.id",
-    display: "halo@ruanggemilangkreatif.id (Konfigurasi Kontak)",
-    isPlaceholder: true,
+    address: "ruanggemilangkreatif@gmail.com",
+    display: "ruanggemilangkreatif@gmail.com",
+    isPlaceholder: false,
     subject: "Konsultasi Layanan Kreatif & Digital — PT Ruang Gemilang Kreatif",
   },
   instagram: {
