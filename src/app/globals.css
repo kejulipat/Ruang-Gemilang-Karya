@@ -13,6 +13,7 @@
   --foreground: #231F20;
   --font-display: "Lineal", "Barlow Condensed", "Oswald", "Bahnschrift Condensed", "Bahnschrift", "Arial Narrow", Impact, sans-serif;
   --font-sans: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 @font-face {
@@ -43,6 +44,28 @@ body {
   font-family: var(--font-display);
   font-stretch: condensed;
   letter-spacing: -0.015em;
+}
+
+.ruler-mono,
+.slashed-zero {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
