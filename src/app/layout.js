@@ -1,9 +1,10 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "PT Ruang Gemilang Kreatif — Bersinar Bersama UMKM",
+  metadataBase: new URL("https://ruang2k.vercel.app"),
+  title: "PT Ruang Gemilang Kreatif — Ruang untuk UMKM Tumbuh Berkembang",
   description:
-    "PT Ruang Gemilang Kreatif hadir sebagai ruang untuk UMKM tumbuh berkembang melalui layanan branding, desain kreatif, media sosial, UI/UX, dan solusi digital.",
+    "Agensi kreatif dan digital yang membantu UMKM naik kelas melalui layanan konten media sosial, branding & kemasan, UI/UX, serta pendampingan digital.",
   keywords: [
     "PT Ruang Gemilang Kreatif",
     "Ruang Kreatif UMKM",
@@ -15,28 +16,43 @@ export const metadata = {
     "Workshop Literasi Digital",
   ],
   authors: [{ name: "PT Ruang Gemilang Kreatif" }],
+  alternates: {
+    canonical: "https://ruang2k.vercel.app",
+  },
+  icons: {
+    icon: [
+      { url: "/logo/favicon.png", sizes: "128x128", type: "image/png" },
+      { url: "/logo/logo-mark-magenta.png", sizes: "104x104", type: "image/png" },
+    ],
+    shortcut: ["/logo/favicon.png"],
+    apple: [
+      { url: "/logo/favicon.png", sizes: "128x128", type: "image/png" },
+    ],
+  },
   openGraph: {
-    title: "PT Ruang Gemilang Kreatif — Bersinar Bersama UMKM",
+    title: "PT Ruang Gemilang Kreatif — Bersinar Bersama",
     description:
-      "Ruang untuk UMKM tumbuh berkembang melalui branding, desain visual, konten media sosial, UI/UX, toko online, website, dan pendampingan digital.",
-    type: "website",
-    locale: "id_ID",
+      "Ruang untuk UMKM tumbuh berkembang melalui desain, identitas merek, tampilan digital, dan pendampingan.",
+    url: "https://ruang2k.vercel.app",
     siteName: "PT Ruang Gemilang Kreatif",
+    locale: "id_ID",
+    type: "website",
     images: [
       {
-        url: "/logos/logo-full-magenta.png",
-        width: 248,
-        height: 106,
-        alt: "Logo PT Ruang Gemilang Kreatif",
+        url: "https://ruang2k.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        type: "image/png",
+        alt: "PT Ruang Gemilang Kreatif — Bersinar Bersama — Ruang untuk UMKM tumbuh berkembang",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PT Ruang Gemilang Kreatif — Bersinar Bersama UMKM",
+    title: "PT Ruang Gemilang Kreatif — Bersinar Bersama",
     description:
-      "Ruang kolaborasi kreatif dan digital untuk membantu UMKM tumbuh berkembang dan bersinar bersama.",
-    images: ["/logos/logo-full-magenta.png"],
+      "Ruang untuk UMKM tumbuh berkembang melalui desain, identitas merek, tampilan digital, dan pendampingan.",
+    images: ["https://ruang2k.vercel.app/og-image.png"],
   },
 };
 
