@@ -2,7 +2,7 @@ import "./globals.css";
 
 export const metadata = {
   metadataBase: new URL("https://ruang2k.vercel.app"),
-  title: "PT Ruang Gemilang Kreatif — Ruang untuk UMKM Tumbuh Berkembang",
+  title: "Ruang Gemilang Kreatif",
   description:
     "Agensi kreatif dan digital yang membantu UMKM naik kelas melalui layanan konten media sosial, branding & kemasan, UI/UX, serta pendampingan digital.",
   keywords: [
