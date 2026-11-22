@@ -132,7 +132,7 @@ export default function TeamSection() {
                       >
                         {role.number}
                       </span>
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#231F20]/60">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#231F20]/75">
                         {role.level}
                       </span>
                     </div>
@@ -160,7 +160,7 @@ export default function TeamSection() {
             </div>
           </div>
 
-          <p className="mt-8 text-center text-xs font-medium text-[#231F20]/60">
+          <p className="mt-8 text-center text-xs font-medium text-[#231F20]/75">
             {teamStructure.transparencyNote}
           </p>
         </div>

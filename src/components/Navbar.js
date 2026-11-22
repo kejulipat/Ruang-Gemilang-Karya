@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { BrandLogo } from "./BrandPattern";
+import { BrandLogo } from "./BrandLogo";
 import { getWhatsAppUrl } from "@/data/contact";
 
 const NAV_ITEMS = [
@@ -18,10 +18,18 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+    const updateScrolled = () => {
       setScrolled(window.scrollY > 24);
+      ticking = false;
     };
-    handleScroll();
+    const handleScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(updateScrolled);
+      }
+    };
+    updateScrolled();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -64,7 +72,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full transition-[background-color,box-shadow] duration-300 ${
         scrolled
           ? "bg-[#231F20]/95 shadow-lg shadow-black/20 backdrop-blur-md border-b border-white/10"
           : "bg-[#231F20] border-b border-white/10"
@@ -98,7 +106,7 @@ export default function Navbar() {
               <a
                 key={item.id}
                 href={item.href}
-                className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5E56E] ${
+                className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5E56E] ${
                   isActive
                     ? "bg-white/12 text-[#E5E56E]"
                     : "text-white/85 hover:bg-white/8 hover:text-white"
@@ -119,7 +127,7 @@ export default function Navbar() {
             href={getWhatsAppUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-3 inline-flex items-center gap-2 rounded-full bg-[#D30B40] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-[#D30B40]/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#b50936] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5E56E]"
+            className="ml-3 inline-flex items-center gap-2 rounded-full bg-[#D30B40] px-5 py-2.5 text-sm font-bold text-white shadow-md shadow-[#D30B40]/25 transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#b50936] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5E56E]"
           >
             <svg
               aria-hidden="true"

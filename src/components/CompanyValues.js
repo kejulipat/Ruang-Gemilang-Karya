@@ -68,7 +68,10 @@ export default function CompanyValues() {
                   >
                     {val.tag}
                   </span>
-                  <span className="font-display text-3xl font-black opacity-30">
+                  <span
+                    aria-hidden="true"
+                    className="font-display text-3xl font-black opacity-30"
+                  >
                     {val.number}
                   </span>
                 </div>

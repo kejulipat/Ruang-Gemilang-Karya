@@ -199,3 +199,11 @@ export const servicesList = [
     visualType: "website-launch",
   },
 ];
+
+export const serviceCategoryCounts = servicesList.reduce(
+  (acc, service) => {
+    acc[service.category] = (acc[service.category] || 0) + 1;
+    return acc;
+  },
+  { Semua: servicesList.length }
+);

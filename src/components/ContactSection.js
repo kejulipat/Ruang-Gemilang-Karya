@@ -45,7 +45,7 @@ export default function ContactSection() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#D30B40] px-7 py-4 text-base font-bold text-white shadow-lg shadow-[#D30B40]/25 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#b50936] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#231F20]"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#D30B40] px-7 py-4 text-base font-bold text-white shadow-lg shadow-[#D30B40]/25 transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#b50936] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#231F20]"
               >
                 <svg
                   aria-hidden="true"
@@ -65,7 +65,7 @@ export default function ContactSection() {
               {/* 2. Email */}
               <a
                 href={getMailtoUrl()}
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#231F20] px-7 py-4 text-base font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#3a3436] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D30B40]"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#231F20] px-7 py-4 text-base font-bold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-[#3a3436] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D30B40]"
               >
                 <svg
                   aria-hidden="true"
@@ -88,7 +88,7 @@ export default function ContactSection() {
                 href={contactConfig.instagram.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-[#231F20] bg-white px-7 py-3.5 text-base font-bold text-[#231F20] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#231F20] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D30B40]"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full border-2 border-[#231F20] bg-white px-7 py-3.5 text-base font-bold text-[#231F20] transition-[transform,background-color,color] duration-200 hover:-translate-y-0.5 hover:bg-[#231F20] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D30B40]"
               >
                 <svg
                   aria-hidden="true"
@@ -111,7 +111,7 @@ export default function ContactSection() {
             {/* Centralized Contact Channels Summary */}
             <div className="mt-8 grid grid-cols-1 gap-3 rounded-2xl border border-[#231F20]/12 bg-white/65 p-4 text-left text-xs sm:grid-cols-3">
               <div>
-                <span className="block font-extrabold uppercase tracking-wider text-[#231F20]/60">
+                <span className="block font-extrabold uppercase tracking-wider text-[#231F20]/75">
                   WhatsApp
                 </span>
                 <span className="mt-0.5 block font-bold text-[#231F20]">
@@ -119,7 +119,7 @@ export default function ContactSection() {
                 </span>
               </div>
               <div>
-                <span className="block font-extrabold uppercase tracking-wider text-[#231F20]/60">
+                <span className="block font-extrabold uppercase tracking-wider text-[#231F20]/75">
                   Email Resmi
                 </span>
                 <span className="mt-0.5 block font-bold text-[#231F20]">
@@ -127,7 +127,7 @@ export default function ContactSection() {
                 </span>
               </div>
               <div>
-                <span className="block font-extrabold uppercase tracking-wider text-[#231F20]/60">
+                <span className="block font-extrabold uppercase tracking-wider text-[#231F20]/75">
                   Instagram
                 </span>
                 <span className="mt-0.5 block font-bold text-[#231F20]">

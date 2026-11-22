@@ -67,7 +67,7 @@ export default function LogoPhilosophy() {
                   >
                     {item.id}
                   </span>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#231F20]/55">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#231F20]/75">
                     Makna Elemen
                   </span>
                 </div>

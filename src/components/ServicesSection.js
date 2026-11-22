@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { serviceCategories, servicesList } from "@/data/services";
+import {
+  serviceCategories,
+  serviceCategoryCounts,
+  servicesList,
+} from "@/data/services";
 import ServiceCard from "./ServiceCard";
 
 export default function ServicesSection() {
@@ -13,11 +17,6 @@ export default function ServicesSection() {
       : servicesList.filter(
           (service) => service.category === selectedCategory
         );
-
-  const getCategoryCount = (catId) =>
-    catId === "Semua"
-      ? servicesList.length
-      : servicesList.filter((service) => service.category === catId).length;
 
   return (
     <section
@@ -53,22 +52,21 @@ export default function ServicesSection() {
 
         {/* Category Filter Bar */}
         <div
-          role="tablist"
+          role="group"
           aria-label="Filter kategori layanan"
           className="mt-8 flex flex-wrap gap-2.5"
         >
           {serviceCategories.map((category) => {
             const isActive = selectedCategory === category.id;
-            const count = getCategoryCount(category.id);
+            const count = serviceCategoryCounts[category.id] || 0;
 
             return (
               <button
                 key={category.id}
                 type="button"
-                role="tab"
-                aria-selected={isActive}
+                aria-pressed={isActive}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-xs font-bold transition-all duration-200 sm:text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#231F20] ${
+                className={`inline-flex items-center gap-2 rounded-full px-4 py-2.5 text-xs font-bold transition-[background-color,color,border-color,box-shadow,transform] duration-200 sm:text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#231F20] ${
                   isActive
                     ? "shadow-md -translate-y-0.5"
                     : "border border-[#231F20]/15 bg-[#F7F7F0] text-[#231F20] hover:border-[#231F20]/40 hover:bg-white"

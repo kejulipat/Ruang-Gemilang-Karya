@@ -7,7 +7,7 @@ export default function PortfolioCard({ project, onSelect }) {
 
   return (
     <article
-      className={`group flex flex-col justify-between overflow-hidden rounded-3xl border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+      className={`group flex flex-col justify-between overflow-hidden rounded-3xl border bg-white transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-xl ${
         isFreshBite
           ? "border-[#231F20]/20 shadow-md lg:col-span-2"
           : "border-[#231F20]/12 shadow-sm"
@@ -157,7 +157,7 @@ export default function PortfolioCard({ project, onSelect }) {
 
           {/* Services Used */}
           <div className="mt-5">
-            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#231F20]/60">
+            <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#231F20]/75">
               Layanan yang Digunakan
             </p>
             <div className="mt-2 flex flex-wrap gap-1.5">

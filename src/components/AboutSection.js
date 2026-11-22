@@ -66,7 +66,7 @@ export default function AboutSection() {
                 <span className="inline-block rounded-full bg-[#D30B40] px-3.5 py-1 text-xs font-extrabold uppercase tracking-widest text-white">
                   Visi Perusahaan
                 </span>
-                <span className="text-[11px] font-semibold text-white/55">
+                <span className="text-[11px] font-semibold text-white/75">
                   Arah Jangka Panjang
                 </span>
               </div>
@@ -75,7 +75,7 @@ export default function AboutSection() {
                 &ldquo;{companyProfile.vision.text}&rdquo;
               </blockquote>
 
-              <p className="mt-4 border-t border-white/12 pt-3 text-[11px] text-white/60">
+              <p className="mt-4 border-t border-white/12 pt-3 text-[11px] text-white/75">
                 {companyProfile.vision.note}
               </p>
             </div>
@@ -112,7 +112,7 @@ export default function AboutSection() {
                 ))}
               </ol>
 
-              <p className="mt-4 text-[11px] text-[#231F20]/60">
+              <p className="mt-4 text-[11px] text-[#231F20]/75">
                 {companyProfile.missionsNote}
               </p>
             </div>

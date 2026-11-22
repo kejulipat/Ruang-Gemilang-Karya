@@ -1,17 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import dynamic from "next/dynamic";
 import {
   portfolioCategories,
   portfolioProjects,
   statusStyles,
 } from "@/data/portfolio";
 import PortfolioCard from "./PortfolioCard";
-import PortfolioDetailModal from "./PortfolioDetailModal";
+
+const PortfolioDetailModal = dynamic(() => import("./PortfolioDetailModal"));
 
 export default function PortfolioSection() {
   const [selectedCategory, setSelectedCategory] = useState("Semua");
   const [activeProject, setActiveProject] = useState(null);
+  const handleCloseModal = useCallback(() => setActiveProject(null), []);
 
   const filteredProjects =
     selectedCategory === "Semua"
@@ -62,7 +65,7 @@ export default function PortfolioSection() {
 
         {/* Category Filters */}
         <div
-          role="tablist"
+          role="group"
           aria-label="Filter kategori portofolio"
           className="mt-8 flex flex-wrap gap-2.5"
         >
@@ -72,10 +75,9 @@ export default function PortfolioSection() {
               <button
                 key={category}
                 type="button"
-                role="tab"
-                aria-selected={isActive}
+                aria-pressed={isActive}
                 onClick={() => setSelectedCategory(category)}
-                className={`rounded-full px-4 py-2 text-xs font-bold transition-all duration-200 sm:text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#231F20] ${
+                className={`rounded-full px-4 py-2 text-xs font-bold transition-colors duration-200 sm:text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#231F20] ${
                   isActive
                     ? "bg-[#231F20] text-[#E5E56E] shadow-md"
                     : "border border-[#231F20]/15 bg-white text-[#231F20] hover:border-[#231F20]/40"
@@ -110,11 +112,13 @@ export default function PortfolioSection() {
         )}
       </div>
 
-      {/* Modal Detail Portofolio */}
-      <PortfolioDetailModal
-        project={activeProject}
-        onClose={() => setActiveProject(null)}
-      />
+      {/* Modal Detail Portofolio (code-split & loaded on demand) */}
+      {activeProject && (
+        <PortfolioDetailModal
+          project={activeProject}
+          onClose={handleCloseModal}
+        />
+      )}
     </section>
   );
 }

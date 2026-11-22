@@ -48,7 +48,7 @@ function ServiceVisualHeader({ visualType, accent, textOnAccent }) {
             <span className="h-8 w-8 rounded-lg bg-[#66CC69]" />
             <span className="h-8 w-8 rounded-lg bg-[#231F20]" />
           </div>
-          <span className="text-[9px] font-extrabold uppercase tracking-wider text-[#231F20]/60">
+          <span className="text-[9px] font-extrabold uppercase tracking-wider text-[#231F20]/75">
             Brand Kit
           </span>
         </div>
@@ -169,7 +169,7 @@ export default function ServiceCard({ service }) {
 
   return (
     <article
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl border bg-white p-6 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-xl ${
         service.featured
           ? "border-[#231F20]/20 shadow-md"
           : "border-[#231F20]/12 shadow-xs"
@@ -185,7 +185,10 @@ export default function ServiceCard({ service }) {
       <div>
         {/* Card Header: Service Number + Category Pill */}
         <div className="flex items-start justify-between gap-3 pt-1">
-          <span className="font-display text-4xl font-black leading-none text-[#231F20]/18 transition-colors group-hover:text-[#231F20]">
+          <span
+            aria-hidden="true"
+            className="font-display text-4xl font-black leading-none text-[#231F20]/25 transition-colors group-hover:text-[#231F20]"
+          >
             {service.number}
           </span>
 
@@ -221,7 +224,7 @@ export default function ServiceCard({ service }) {
 
         {/* Deliverables Checklist */}
         <div className="mt-5 rounded-2xl bg-[#F7F7F0] p-4">
-          <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#231F20]/65">
+          <p className="text-[11px] font-extrabold uppercase tracking-[0.14em] text-[#231F20]/75">
             Deliverables Utama
           </p>
           <ul className="mt-2.5 space-y-2">
@@ -263,7 +266,7 @@ export default function ServiceCard({ service }) {
           href={getServiceWhatsAppUrl(service.name)}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#231F20] px-5 py-3 text-sm font-bold text-white transition-all duration-200 hover:bg-[#D30B40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D30B40]"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#231F20] px-5 py-3 text-sm font-bold text-white transition-colors duration-200 hover:bg-[#D30B40] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#D30B40]"
         >
           <span>Tanya Layanan Ini</span>
           <svg

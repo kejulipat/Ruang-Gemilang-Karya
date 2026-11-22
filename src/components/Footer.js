@@ -136,7 +136,7 @@ export default function Footer() {
         </div>
 
         {/* Bagian 4: Hak Cipta */}
-        <div className="mt-8 flex flex-col items-center justify-between gap-3 text-center text-xs text-white/60 sm:flex-row sm:text-left">
+        <div className="mt-8 flex flex-col items-center justify-between gap-3 text-center text-xs text-white/75 sm:flex-row sm:text-left">
           <p>&copy; 2026 PT Ruang Gemilang Kreatif. All Rights Reserved.</p>
           <p className="font-semibold text-white/75">
             {companyProfile.monogram} &mdash; {companyProfile.tagline}

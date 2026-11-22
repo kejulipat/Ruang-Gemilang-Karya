@@ -56,7 +56,7 @@ export default function HeroSection() {
                 href={getWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#D30B40] px-7 py-4 text-base font-bold text-white shadow-lg shadow-[#D30B40]/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#b50936] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5E56E]"
+                className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#D30B40] px-7 py-4 text-base font-bold text-white shadow-lg shadow-[#D30B40]/30 transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#b50936] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5E56E]"
               >
                 <span>Konsultasi Sekarang</span>
                 <svg
@@ -75,7 +75,7 @@ export default function HeroSection() {
 
               <a
                 href="#layanan"
-                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#E5E56E] bg-transparent px-7 py-3.5 text-base font-bold text-[#E5E56E] transition-all duration-200 hover:bg-[#E5E56E] hover:text-[#231F20] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-[#E5E56E] bg-transparent px-7 py-3.5 text-base font-bold text-[#E5E56E] transition-colors duration-200 hover:bg-[#E5E56E] hover:text-[#231F20] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 <span>Lihat Katalog Layanan</span>
               </a>
@@ -143,7 +143,7 @@ export default function HeroSection() {
                       <span className="rounded-md bg-[#66CC69] px-2 py-0.5 text-[10px] font-extrabold uppercase text-[#231F20]">
                         Branding &amp; Kemasan
                       </span>
-                      <span className="text-[10px] font-semibold text-white/60">
+                      <span className="text-[10px] font-semibold text-white/75">
                         Mockup
                       </span>
                     </div>

@@ -103,9 +103,9 @@ export default function WorkflowSection() {
             />
             <div
               aria-hidden="true"
-              className="absolute left-6 top-8 h-1 rounded-full bg-[#E5E56E] transition-all duration-300"
+              className="absolute left-6 right-6 top-8 h-1 origin-left rounded-full bg-[#E5E56E] transition-transform duration-300"
               style={{
-                width: `calc(${(activeIndex / (workflowStages.length - 1)) * 100}% - 12px)`,
+                transform: `scaleX(${activeIndex / (workflowStages.length - 1)})`,
               }}
             />
 
@@ -121,14 +121,14 @@ export default function WorkflowSection() {
                     onClick={() => setActiveIndex(index)}
                     onMouseEnter={() => setActiveIndex(index)}
                     aria-pressed={isSelected}
-                    className={`group flex flex-col items-center rounded-2xl p-3 text-center transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5E56E] ${
+                    className={`group flex flex-col items-center rounded-2xl p-3 text-center transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E5E56E] ${
                       isSelected
                         ? "bg-white/10"
                         : "hover:bg-white/5"
                     }`}
                   >
                     <span
-                      className={`relative z-10 flex h-12 w-12 items-center justify-center rounded-2xl border-2 font-display text-lg font-black transition-all duration-200 ${
+                      className={`relative z-10 flex h-12 w-12 items-center justify-center rounded-2xl border-2 font-display text-lg font-black transition-[transform,background-color,border-color,color,box-shadow] duration-200 ${
                         isSelected
                           ? "scale-110 border-[#E5E56E] bg-[#D30B40] text-white shadow-lg shadow-[#D30B40]/35"
                           : isPassed
@@ -141,7 +141,7 @@ export default function WorkflowSection() {
 
                     <span
                       className={`mt-3 text-[11px] font-extrabold uppercase tracking-wider ${
-                        isSelected ? "text-[#E5E56E]" : "text-white/55"
+                        isSelected ? "text-[#E5E56E]" : "text-white/75"
                       }`}
                     >
                       {stage.phaseTag}
@@ -214,7 +214,7 @@ export default function WorkflowSection() {
 
             <div className="col-span-5 flex flex-col justify-between rounded-2xl border border-white/12 bg-[#231F20] p-6">
               <div>
-                <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-white/60">
+                <p className="text-[11px] font-extrabold uppercase tracking-[0.16em] text-white/75">
                   Aktivitas pada Tahap Ini
                 </p>
                 <ul className="mt-3 space-y-2.5">
@@ -264,7 +264,7 @@ export default function WorkflowSection() {
                     type="button"
                     onClick={() => setActiveIndex(index)}
                     aria-expanded={isOpen}
-                    className={`w-full rounded-2xl border p-4 text-left transition-all ${
+                    className={`w-full rounded-2xl border p-4 text-left transition-colors ${
                       isOpen
                         ? "border-[#E5E56E] bg-white/10"
                         : "border-white/12 bg-white/4 hover:bg-white/7"
@@ -292,7 +292,7 @@ export default function WorkflowSection() {
                       </div>
                       <span
                         aria-hidden="true"
-                        className="text-xs font-bold text-white/60"
+                        className="text-xs font-bold text-white/75"
                       >
                         {isOpen ? "−" : "+"}
                       </span>
