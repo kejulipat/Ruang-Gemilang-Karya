@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-magenta: #D30B40;
+  --brand-lime: #E5E56E;
+  --brand-blue: #4486C1;
+  --brand-green: #66CC69;
+  --brand-black: #231F20;
+  --brand-white: #FFFFFF;
+  --brand-cream: #F7F7F0;
+
+  --background: #FFFFFF;
+  --foreground: #231F20;
+  --font-display: "Lineal", "Barlow Condensed", "Oswald", "Bahnschrift Condensed", "Bahnschrift", "Arial Narrow", Impact, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: "Lineal";
+  src:
+    local("Lineal Bold"),
+    local("Lineal"),
+    local("Bahnschrift Condensed"),
+    local("Bahnschrift SemiCondensed"),
+    local("Arial Narrow");
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--brand-white);
+  color: var(--brand-black);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-stretch: condensed;
+  letter-spacing: -0.015em;
+}
+
+/* Subtle 8-directional grid pattern echoing the house-flower logo geometry */
+.bg-rgk-grid-dark {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(229, 229, 110, 0.12) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+.bg-rgk-grid-light {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(35, 31, 32, 0.08) 1px, transparent 0);
+  background-size: 26px 26px;
+}
+
+.bg-rgk-cross-pattern {
+  background-image:
+    linear-gradient(to right, rgba(35, 31, 32, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(35, 31, 32, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
